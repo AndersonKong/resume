@@ -25,3 +25,10 @@ export default {
   // max-width: 1080px;
 }
 </style>
+
+<style>
+  
+body{
+  background-color: #e1e7eb;
+}
+</style>
