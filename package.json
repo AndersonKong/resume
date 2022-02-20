@@ -15,6 +15,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-pwa": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "jquery": "^3.6.0",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
     "tdesign-vue": "^0.35.0",
