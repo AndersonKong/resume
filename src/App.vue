@@ -16,6 +16,11 @@ export default {
 </script>
 
 <style lang="less">
+@font-face {
+  font-family: '新细明体';
+  src: url('~@/assets/css/font/新細明體v7.03(R).ttf');
+}
+
 .container {
   margin: 0 auto;
   display: flex;
@@ -23,12 +28,5 @@ export default {
   align-items: center;
   overflow: hidden;
   // max-width: 1080px;
-}
-</style>
-
-<style>
-  
-body{
-  background-color: #e1e7eb;
 }
 </style>

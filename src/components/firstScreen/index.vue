@@ -2,11 +2,24 @@
   <div class="firstScreen">
     <div class="background"></div>
     <div class="navigation">
-      <div class="nav_left">123</div>
+      <div class="nav_left">
+        <div>
+          <img src="@/assets/images/navigation.svg" style="width:60vw" />
+        </div>
+        <div>RESUME</div>
+      </div>
       <div class="nav_right">
         <span>PERSONAL</span>
         <span>RESUME</span>
       </div>
+    </div>
+    <div class="content">
+      <span>PERSONAL</span>
+      <span>RESUME</span>
+      <span>个人简历</span>
+    </div>
+    <div class="footer">
+      <div style="word-break:noword">2019-2022</div>
     </div>
   </div>
 </template>
@@ -79,12 +92,72 @@ export default {
 </script>
 <style lang="less" scope>
 @import '~@/assets/css/codepf.css';
+@color: #495057;
 .firstScreen {
   width: 100vw;
   height: 100vh;
+  padding: 150px;
+  display: flex;
+  flex-direction: column;
   .navigation {
     display: flex;
     justify-content: space-between;
+    .nav_left {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+    .nav_right {
+      z-index: 2;
+      color: @color;
+      font-size: 36px;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      font-weight: 700;
+    }
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 4vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    span {
+      font-size: 60px;
+      color: #ced4da;
+      &:nth-child(3) {
+        font-size: 60px;
+        white-space: nowrap;
+        position: absolute;
+        color: #212121;
+        font-weight: 700;
+        z-index: 3;
+        letter-spacing: 4vw;
+      }
+    }
+  }
+  .footer {
+    z-index: 2;
+    div {
+      font-size: 30px;
+      color: @color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &::before {
+        content: '';
+        width: 0;
+        display: flex;
+        border-style: solid;
+        border-color: transparent transparent @color transparent;
+        border-width: 0 20px 30px 20px;
+        margin-right: 20px;
+      }
+    }
   }
   .background {
     position: absolute;
@@ -166,6 +239,26 @@ startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
     );
     background: radial-gradient(ellipse at center, #edf3f8 1%, #dee3e8 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
+  }
+}
+@media (max-width: 912px) {
+  .firstScreen {
+    padding: 50px !important;
+  }
+  .nav_left {
+    display: none !important ;
+  }
+  .nav_right {
+    align-items: center !important;
+    font-size: 40px !important;
+  }
+  .navigation {
+    justify-content: center !important;
+  }
+  .content {
+    span {
+      font-size: 40px !important;
+    }
   }
 }
 </style>
