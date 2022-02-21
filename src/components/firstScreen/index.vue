@@ -1,63 +1,65 @@
 <template>
   <div class="firstScreen">
     <div class="background"></div>
-    <div class="navigation">
-      <div class="nav_left">
-        <div>
-          <img src="@/assets/images/navigation.svg" style="width:60vw" />
+    <div class="first-container">
+      <div class="navigation">
+        <div class="nav_left">
+          <div>
+            <img src="@/assets/images/navigation.svg" style="width: 60vw" />
+          </div>
+          <div>RESUME</div>
         </div>
-        <div>RESUME</div>
+        <div class="nav_right">
+          <span>PERSONAL</span>
+          <span>RESUME</span>
+        </div>
       </div>
-      <div class="nav_right">
+      <div class="content">
         <span>PERSONAL</span>
         <span>RESUME</span>
+        <span>个人简历</span>
       </div>
-    </div>
-    <div class="content">
-      <span>PERSONAL</span>
-      <span>RESUME</span>
-      <span>个人简历</span>
-    </div>
-    <div class="footer">
-      <div style="word-break:noword">2019-2022</div>
+      <div class="footer">
+        <div style="word-break: noword">2019-2022</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import $ from 'jquery'
-import Particle from '@/utils/particle'
+import $ from "jquery";
+import Particle from "@/utils/particle";
 
-function init () {
+function init() {
   const rhombus =
-    '<svg viewBox="0 0 13 14"><path class="rhombus" d="M5.9,1.2L0.7,6.5C0.5,6.7,0.5,7,0.7,7.2l5.2,5.4c0.2,0.2,0.5,0.2,0.7,0l5.2-5.4 C12,7,12,6.7,11.8,6.5L6.6,1.2C6.4,0.9,6.1,0.9,5.9,1.2L5.9,1.2z M3.4,6.5L6,3.9c0.2-0.2,0.5-0.2,0.7,0l2.6,2.6 c0.2,0.2,0.2,0.5,0,0.7L6.6,9.9c-0.2,0.2-0.5,0.2-0.7,0L3.4,7.3C3.2,7.1,3.2,6.8,3.4,6.5L3.4,6.5z" /></svg>'
+    '<svg viewBox="0 0 13 14"><path class="rhombus" d="M5.9,1.2L0.7,6.5C0.5,6.7,0.5,7,0.7,7.2l5.2,5.4c0.2,0.2,0.5,0.2,0.7,0l5.2-5.4 C12,7,12,6.7,11.8,6.5L6.6,1.2C6.4,0.9,6.1,0.9,5.9,1.2L5.9,1.2z M3.4,6.5L6,3.9c0.2-0.2,0.5-0.2,0.7,0l2.6,2.6 c0.2,0.2,0.2,0.5,0,0.7L6.6,9.9c-0.2,0.2-0.5,0.2-0.7,0L3.4,7.3C3.2,7.1,3.2,6.8,3.4,6.5L3.4,6.5z" /></svg>';
 
   const pentahedron =
-    '<svg viewBox="0 0 561.8 559.4"><path class="pentahedron" d="M383.4,559.4h-204l-2.6-0.2c-51.3-4.4-94-37-108.8-83l-0.2-0.6L6,276.7l-0.2-0.5c-14.5-50,3.1-102.7,43.7-131.4 L212.1,23C252.4-7.9,310.7-7.9,351,23l163.5,122.5l0.4,0.3c39,30.3,56,82.6,42.2,130.3l-0.3,1.1l-61.5,198 C480.4,525.6,435.5,559.4,383.4,559.4z M185.5,439.4h195.2l61.1-196.8c0-0.5-0.3-1.6-0.7-2.1L281.5,120.9L120.9,241.2 c0,0.3,0.1,0.7,0.2,1.2l60.8,195.8C182.5,438.5,183.7,439.1,185.5,439.4z M441,240.3L441,240.3L441,240.3z"/></svg>'
+    '<svg viewBox="0 0 561.8 559.4"><path class="pentahedron" d="M383.4,559.4h-204l-2.6-0.2c-51.3-4.4-94-37-108.8-83l-0.2-0.6L6,276.7l-0.2-0.5c-14.5-50,3.1-102.7,43.7-131.4 L212.1,23C252.4-7.9,310.7-7.9,351,23l163.5,122.5l0.4,0.3c39,30.3,56,82.6,42.2,130.3l-0.3,1.1l-61.5,198 C480.4,525.6,435.5,559.4,383.4,559.4z M185.5,439.4h195.2l61.1-196.8c0-0.5-0.3-1.6-0.7-2.1L281.5,120.9L120.9,241.2 c0,0.3,0.1,0.7,0.2,1.2l60.8,195.8C182.5,438.5,183.7,439.1,185.5,439.4z M441,240.3L441,240.3L441,240.3z"/></svg>';
   const x =
-    '<svg viewBox="0 0 12 12"> <path class="x" d="M10.3,4.3H7.7V1.7C7.7,0.8,7,0,6,0S4.3,0.8,4.3,1.7v2.5H1.7C0.8,4.3,0,5,0,6s0.8,1.7,1.7,1.7h2.5v2.5 C4.3,11.2,5,12,6,12s1.7-0.8,1.7-1.7V7.7h2.5C11.2,7.7,12,7,12,6S11.2,4.3,10.3,4.3z"/></svg>'
+    '<svg viewBox="0 0 12 12"> <path class="x" d="M10.3,4.3H7.7V1.7C7.7,0.8,7,0,6,0S4.3,0.8,4.3,1.7v2.5H1.7C0.8,4.3,0,5,0,6s0.8,1.7,1.7,1.7h2.5v2.5 C4.3,11.2,5,12,6,12s1.7-0.8,1.7-1.7V7.7h2.5C11.2,7.7,12,7,12,6S11.2,4.3,10.3,4.3z"/></svg>';
 
   const circle =
-    '<svg x="0px" y="0px" viewBox="0 0 13 12"> <path class="circle" d="M6.5,0.1C3.4,0.1,0.8,2.8,0.8,6s2.6,5.9,5.7,5.9s5.7-2.7,5.7-5.9S9.7,0.1,6.5,0.1L6.5,0.1z M6.5,8.8 C5,8.8,3.8,7.6,3.8,6S5,3.2,6.5,3.2S9.2,4.4,9.2,6S8,8.8,6.5,8.8L6.5,8.8z"/> </svg>'
+    '<svg x="0px" y="0px" viewBox="0 0 13 12"> <path class="circle" d="M6.5,0.1C3.4,0.1,0.8,2.8,0.8,6s2.6,5.9,5.7,5.9s5.7-2.7,5.7-5.9S9.7,0.1,6.5,0.1L6.5,0.1z M6.5,8.8 C5,8.8,3.8,7.6,3.8,6S5,3.2,6.5,3.2S9.2,4.4,9.2,6S8,8.8,6.5,8.8L6.5,8.8z"/> </svg>';
 
   const point =
-    '<svg viewBox="0 0 12 12"> <path class="point" d="M6,7.5L6,7.5C5.1,7.5,4.5,6.9,4.5,6v0c0-0.9,0.7-1.5,1.5-1.5h0c0.9,0,1.5,0.7,1.5,1.5v0C7.5,6.9,6.9,7.5,6,7.5z "/> </svg>'
+    '<svg viewBox="0 0 12 12"> <path class="point" d="M6,7.5L6,7.5C5.1,7.5,4.5,6.9,4.5,6v0c0-0.9,0.7-1.5,1.5-1.5h0c0.9,0,1.5,0.7,1.5,1.5v0C7.5,6.9,6.9,7.5,6,7.5z "/> </svg>';
 
-  function randomInt (min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  const data = [point, rhombus, pentahedron, circle, x]
+  const data = [point, rhombus, pentahedron, circle, x];
 
-  let isPaused = false
+  let isPaused = false;
   window.onblur = function () {
-    isPaused = true
-  }.bind(this)
+    isPaused = true;
+  }.bind(this);
   window.onfocus = function () {
-    isPaused = false
-  }.bind(this)
+    isPaused = false;
+  }.bind(this);
 
-  let particles = []
+  let particles = [];
 
   setInterval(function () {
     if (!isPaused) {
@@ -66,99 +68,108 @@ function init () {
           data[randomInt(0, data.length - 1)],
           {
             x: Math.random() * $(window).width(),
-            y: $(window).height()
+            y: $(window).height(),
           },
           1 + Math.random() * 3
         )
-      )
+      );
     }
-  }, 200)
+  }, 200);
 
-  function update () {
+  function update() {
     particles = particles.filter(function (p) {
-      return p.move()
-    })
-    requestAnimationFrame(update.bind(this))
+      return p.move();
+    });
+    requestAnimationFrame(update.bind(this));
   }
-  update()
+  update();
 }
 
 export default {
-  name: 'firstScreen',
-  mounted () {
-    init()
-  }
-}
+  name: "firstScreen",
+  mounted() {
+    init();
+  },
+};
 </script>
 <style lang="less" scope>
-@import '~@/assets/css/codepf.css';
+@import "~@/assets/css/codepf.css";
 @color: #495057;
 .firstScreen {
   width: 100vw;
   height: 100vh;
-  padding: 150px;
+  // padding: 150px;
   display: flex;
   flex-direction: column;
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    .nav_left {
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-    }
-    .nav_right {
-      z-index: 2;
-      color: @color;
-      font-size: 36px;
-      display: flex;
-      align-items: flex-end;
-      flex-direction: column;
-      font-weight: 700;
-    }
-  }
-  .content {
-    flex: 1;
+  .first-container {
     display: flex;
     flex-direction: column;
-    letter-spacing: 4vw;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    position: relative;
-    span {
-      font-size: 60px;
-      color: #ced4da;
-      &:nth-child(3) {
-        font-size: 60px;
-        white-space: nowrap;
-        position: absolute;
-        color: #212121;
-        font-weight: 700;
-        z-index: 3;
-        letter-spacing: 4vw;
-      }
-    }
-  }
-  .footer {
-    z-index: 2;
-    div {
-      font-size: 30px;
-      color: @color;
+    width: 90%;
+    height: 100%;
+    margin:0 auto;
+    padding: 50px 0;
+    .navigation {
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      &::before {
-        content: '';
-        width: 0;
+      justify-content: space-between;
+      .nav_left {
+        z-index: 2;
         display: flex;
-        border-style: solid;
-        border-color: transparent transparent @color transparent;
-        border-width: 0 20px 30px 20px;
-        margin-right: 20px;
+        flex-direction: column;
+      }
+      .nav_right {
+        z-index: 2;
+        color: @color;
+        font-size: 36px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        font-weight: 700;
+      }
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 4vw;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      position: relative;
+      span {
+        font-size: 60px;
+        color: #ced4da;
+        &:nth-child(3) {
+          font-size: 60px;
+          white-space: nowrap;
+          position: absolute;
+          color: #212121;
+          font-weight: 700;
+          z-index: 3;
+          letter-spacing: 4vw;
+        }
+      }
+    }
+    .footer {
+      z-index: 2;
+      div {
+        font-size: 30px;
+        color: @color;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &::before {
+          content: "";
+          width: 0;
+          display: flex;
+          border-style: solid;
+          border-color: transparent transparent @color transparent;
+          border-width: 0 20px 30px 20px;
+          margin-right: 20px;
+        }
       }
     }
   }
+
   .background {
     position: absolute;
     left: 0;
@@ -182,13 +193,13 @@ export default {
     filter: progid:DXImageTransform.Microsoft.gradient(
 startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
   }
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600');
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600");
   .more-pens {
     position: fixed;
     left: 20px;
     bottom: 20px;
     z-index: 10;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 12px;
   }
 
@@ -196,7 +207,7 @@ startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
   a.white-mode:link,
   a.white-mode:visited,
   a.white-mode:active {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 12px;
     text-decoration: none;
     background: #212121;
