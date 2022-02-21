@@ -152,7 +152,7 @@ export default {
     .footer {
       z-index: 2;
       div {
-        font-size: 30px;
+        font-size: 18px;
         color: @color;
         display: flex;
         flex-direction: row;
@@ -163,7 +163,7 @@ export default {
           display: flex;
           border-style: solid;
           border-color: transparent transparent @color transparent;
-          border-width: 0 20px 30px 20px;
+          border-width: 0 1rem 1.2rem 1rem;
           margin-right: 20px;
         }
       }
