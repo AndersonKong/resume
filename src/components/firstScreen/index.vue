@@ -256,24 +256,4 @@ startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
   }
 }
-@media (max-width: 912px) {
-  .firstScreen {
-    // padding: 50px !important;
-  }
-  .nav_left {
-    display: none !important ;
-  }
-  .nav_right {
-    align-items: center !important;
-    font-size: 40px !important;
-  }
-  .navigation {
-    justify-content: center !important;
-  }
-  .content {
-    span {
-      font-size: 40px !important;
-    }
-  }
-}
 </style>

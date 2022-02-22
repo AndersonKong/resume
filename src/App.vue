@@ -31,4 +31,49 @@ export default {
   overflow: hidden;
   // max-width: 1080px;
 }
+@media (max-width: 1080px) {
+  // 第一页
+  .firstScreen {
+    // padding: 50px !important;
+  }
+  .nav_left {
+    display: none !important ;
+  }
+  .nav_right {
+    align-items: center !important;
+    font-size: 40px !important;
+  }
+  .navigation {
+    justify-content: center !important;
+  }
+  .content {
+    span {
+      font-size: 40px !important;
+    }
+  }
+
+  //第三页
+  .download_container {
+    // display: none !important;
+    visibility: hidden;
+  }
+}
+@media print {
+  .resume_about {
+    margin-bottom: 400px !important;
+    height: 800px !important;
+    margin-bottom: 400px !important;
+  }
+  .second-screen .avatar-box span:nth-child(3) {
+    background-color: red !important;
+  }
+  .download_container {
+    display: none !important;
+  }
+}
+@media (min-width: 1080px) {
+  .three-screen {
+    height: 100vh !important;
+  }
+}
 </style>

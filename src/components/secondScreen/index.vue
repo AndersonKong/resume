@@ -295,15 +295,4 @@ export default {
     }
   }
 }
-@media print {
-  .resume_about {
-    // margin-bottom: 400px !important;
-    // height: 800px !important;
-    margin-bottom: 400px !important;
-  }
-
-  .second-screen .avatar-box span:nth-child(3) {
-    // background-color: red !important;
-  }
-}
 </style>

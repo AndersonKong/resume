@@ -67,25 +67,49 @@
             </div>
           </div>
         </t-col>
-        <t-col :md="6">
+        <t-col :md="6" style="height:100%;">
           <div class="skill_right">
-            <div class="download">
-              <div>Download Resume.docx</div>
-              <div>
-                <i class="iconfont icon-xiazai"></i>
+            <div class="download_container">
+              <div class="download">
+                <div>Download Resume.docx</div>
+                <div>
+                  <i class="iconfont icon-xiazai"></i>
+                </div>
               </div>
             </div>
             <div class="core_skills">
+              <div class="core-skill-title">核心技术</div>
               <ul>
                 <li>
                   <div class="circle-bar">
-                    <div></div>
+                    <!-- <div></div> -->
+                    <svg>
+                      <circle></circle>
+                    </svg>
                     <div>80%</div>
                   </div>
                   <div class="core_skills_name">JavaScript,ES6</div>
                 </li>
-                <li></li>
-                <li></li>
+                <li>
+                  <div class="circle-bar">
+                    <svg>
+                      <circle></circle>
+                    </svg>
+                    <div>80%</div>
+                  </div>
+                  <div class="core_skills_name">TypeScript</div>
+                </li>
+
+                <li>
+                  <div class="circle-bar">
+                    <!-- <div></div> -->
+                    <svg>
+                      <circle></circle>
+                    </svg>
+                    <div>80%</div>
+                  </div>
+                  <div class="core_skills_name">Vuejs</div>
+                </li>
               </ul>
             </div>
           </div>
@@ -110,11 +134,13 @@ export default {
 
 .three-screen {
   width: 100vw;
-  height: 100vh;
-  padding: 10px 20px;
+  // height: 100vh;
   .content-box {
     max-width: 1080px;
+    height: 100%;
     margin: 0 auto;
+    padding: 50px 50px;
+
     .skill_left {
       display: flex;
       flex-direction: column;
@@ -122,9 +148,9 @@ export default {
       height: 100%;
       max-width: 1080px;
       .personal_intro {
+        height: 30%;
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
         span {
           word-break: break-all;
           line-height: 28px;
@@ -192,81 +218,100 @@ export default {
     .skill_right {
       width: 100%;
       max-width: 1080px;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      .download {
-        display: flex;
-        margin-left: auto;
-        width: 300px;
-        height: 100px;
-        div {
+      .download_container {
+        height: 30%;
+        .download {
           display: flex;
-          justify-content: center;
-          align-items: center; // margin-top: 50px;
-          &:nth-child(1) {
-            width: 70%;
-            height: 100%;
-            background-color: @color;
-            font-weight: 700;
-          }
-          &:nth-child(2) {
-            width: 30%;
-            height: 100%;
-            background-color: #495057;
-            cursor: pointer;
-            .icon-xiazai {
-              color: @color;
-              font-size: 20px;
+          margin-left: auto;
+          margin-top: 50px;
+          width: 300px;
+          height: 100px;
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center; // margin-top: 50px;
+            &:nth-child(1) {
+              width: 70%;
+              height: 100%;
+              background-color: @color;
+              font-weight: 700;
+            }
+            &:nth-child(2) {
+              width: 30%;
+              height: 100%;
+              background-color: #495057;
+              cursor: pointer;
+              .icon-xiazai {
+                color: @color;
+                font-size: 20px;
+              }
             }
           }
         }
       }
-      @circle-width: 16px;
+
+      @circle-size: 120px;
+      @circle-width: 10px;
       .core_skills {
         width: 100%;
+        .core-skill-title {
+          font-size: 30px;
+          font-weight: 700;
+          margin-bottom: 30px;
+          color: @font-color;
+        }
         ul {
           width: 100%;
           display: flex;
           flex-direction: row;
           justify-content: space-around;
+          padding: 50px 0;
           li {
             display: flex;
             flex-direction: column;
             align-items: center;
             .circle-bar {
-              width: 200px;
-              height: 200px;
+              width: @circle-size;
+              height: @circle-size;
+              box-sizing: border-box;
               border-radius: 50%;
               border: @circle-width solid #495057;
               position: relative;
               display: flex;
               justify-content: center;
               align-items: center;
-              div {
-                &:nth-child(1) {
-                  width: 200px;
-                  height: 200px;
-                  border: @circle-width solid @color;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  position: absolute;
-                  border-radius: 50%;
-                  clip-path: polygon(
-                    0 50%,
-                    0 0,
-                    100% 0,
-                    100% 100%,
-                    86% 100%,
-                    50% 50%
-                  );
-                }
-                &:nth-child(2) {
-                  font-size: 30px;
-                  color: @font-color;
-                  z-index: 2;
+              @circle-r: (@circle-size - @circle-width) / 2;
+              @circle-d: @circle-r * 6.28;
+              svg {
+                width: @circle-size;
+                height: @circle-size;
+                circle {
+                  cx: calc(@circle-size / 2);
+                  cy: calc(@circle-size / 2);
+                  r: calc(@circle-r);
+                  fill: none;
+                  stroke-width: @circle-width;
+                  stroke-dasharray: calc(@circle-d);
+                  stroke-dashoffset: 56;
+                  transform-origin: center;
+                  transform-box: fill-box;
+                  transform: rotate(180deg);
+                  -webkit-transform: rotate(180deg);
+
+                  stroke: @color;
                 }
               }
+              div {
+                font-size: 20px;
+                color: @font-color;
+                z-index: 2;
+              }
+            }
+            .core_skills_name {
+              margin-top: 20px;
             }
           }
         }
