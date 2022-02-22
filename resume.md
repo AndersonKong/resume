@@ -15,8 +15,9 @@
   | ---------------------- | ---- |
   | Javascript，ES6        | 80%  |
   | Typescript             | 70%  |
-  | Vuejs，Vuex，VueRouter | 70%  |
+  | Vuejs，                | 70%  |
   | CSS3，Sass，Less       | 80%  |
+  | Vuex，VueRouter        | 70%  |
   | NodeJS                 | 50%  |
   | Laravel                | 60%  |
   | Git                    | 80%  |

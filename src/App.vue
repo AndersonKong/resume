@@ -2,6 +2,7 @@
   <div class="container" id="app">
     <firstScreen />
     <secondScreen />
+    <threeScreen />
   </div>
 </template>
 
@@ -10,7 +11,8 @@ export default {
   name: 'App',
   components: {
     firstScreen: () => import('@/components/firstScreen'),
-    secondScreen: () => import('@/components/secondScreen')
+    secondScreen: () => import('@/components/secondScreen'),
+    threeScreen: () => import('@/components/threeScreen')
   }
 }
 </script>

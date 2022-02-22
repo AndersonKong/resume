@@ -10,8 +10,8 @@
           <div>RESUME</div>
         </div>
         <div class="nav_right">
-          <span>PERSONAL</span>
-          <span>RESUME</span>
+          <span>Anderson Kong</span>
+          <!-- <span>Resume</span> -->
         </div>
       </div>
       <div class="content">
@@ -20,7 +20,9 @@
         <span>个人简历</span>
       </div>
       <div class="footer">
-        <div style="word-break: noword">2019-2022</div>
+        <div style="word-break: noword">
+          应届毕业 广东工贸职业技术学院 2019-2022
+        </div>
       </div>
     </div>
   </div>
@@ -115,6 +117,7 @@ export default {
         z-index: 2;
         display: flex;
         flex-direction: column;
+        user-select: none;
       }
       .nav_right {
         z-index: 2;
@@ -135,6 +138,7 @@ export default {
       align-items: center;
       z-index: 2;
       position: relative;
+      user-select: none;
       span {
         font-size: 60px;
         color: #ced4da;
@@ -254,7 +258,7 @@ startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
 }
 @media (max-width: 912px) {
   .firstScreen {
-    padding: 50px !important;
+    // padding: 50px !important;
   }
   .nav_left {
     display: none !important ;

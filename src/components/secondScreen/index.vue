@@ -1,10 +1,7 @@
 <template>
   <div class="second-screen">
     <div class="resume">
-      <div
-        style="width:100%;display:flex;justify-content:center;
-"
-      >
+      <div class="resume-header">
         <div class="avatar-box">
           <img class="avatar" src="@/assets/images/avatar.png" />
           <span></span><span></span><span></span>
@@ -136,7 +133,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  .resume-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .avatar {
     width: 200px;
     height: auto;
@@ -162,6 +163,10 @@ export default {
       transform: translate(-50px, 120px) scale(1);
       z-index: -2;
       border-radius: 50%;
+      //google chrome explore -webkit-print-color-adjust: exact; //firefox explore
+      -moz-print-color-adjust: exact;
+      color-adjust: exact;
+
       &:nth-child(2) {
         background-color: #d8adff;
         transform: translate(200px, 20px) scale(1.5);
@@ -288,6 +293,17 @@ export default {
         }
       }
     }
+  }
+}
+@media print {
+  .resume_about {
+    // margin-bottom: 400px !important;
+    // height: 800px !important;
+    margin-bottom: 400px !important;
+  }
+
+  .second-screen .avatar-box span:nth-child(3) {
+    // background-color: red !important;
   }
 }
 </style>

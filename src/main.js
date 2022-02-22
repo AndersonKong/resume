@@ -3,6 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import '@/assets/css/reset.css'
 import 'tdesign-vue/es/style/index.css';
+import '@/assets/css/iconfont/iconfont.css'
 
 // import TDesign from 'tdesign-vue';
 // 引入组件库全局样式资源
