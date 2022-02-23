@@ -261,7 +261,7 @@ export default {
               color: @font-low-color;
               font-size: @fontSize - 4;
               text-indent: 2em;
-              padding: 6px 15px;
+              padding: 0 15px;
               &:not(:first-child) {
                 margin-left: 20px;
               }

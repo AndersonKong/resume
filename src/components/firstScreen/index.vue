@@ -35,7 +35,7 @@
           <div>
             <img src="@/assets/images/navigation.svg" style="width: 60vw" />
           </div>
-          <div>
+          <div class="nav_menu">
             <a href="#second-screen">Resume</a>
             <a href="#three-screen">Skill</a>
             <a href="#four-screen">Works</a>
@@ -254,6 +254,11 @@ export default {
         display: flex;
         flex-direction: column;
         user-select: none;
+        .nav_menu{
+          a:hover{
+            color: #fdbd00;
+          }
+        }
         div {
           &:nth-child(2) {
             display: flex;

@@ -38,7 +38,7 @@ export default {
   //   transform: translateY(-80px);
   transition: all 1s;
   .icon-rocket {
-    color: #3e82f7;
+    color: #fdbd00;
     font-size: 50px;
   }
 }

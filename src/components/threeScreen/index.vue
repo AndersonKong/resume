@@ -130,7 +130,7 @@ export default {
 <style lang="less" scoped>
 @font-color: #505050;
 @font-low-color: #bbbec0;
-@color: #3e82f7;
+@color: #fdbd00;
 
 .three-screen {
   width: 100vw;
@@ -148,9 +148,10 @@ export default {
       height: 100%;
       max-width: 1080px;
       .personal_intro {
-        height: 30%;
+        // height: 30%;
         display: flex;
         flex-direction: column;
+        margin-bottom:10px;
         span {
           word-break: break-all;
           line-height: 28px;
@@ -222,11 +223,11 @@ export default {
       display: flex;
       flex-direction: column;
       .download_container {
-        height: 30%;
+        // height: 30%;
         .download {
           display: flex;
           margin-left: auto;
-          margin-top: 50px;
+          // margin-top: 50px;
           width: 300px;
           height: 100px;
           div {
