@@ -23,7 +23,7 @@ export default {
   src: url('~@/assets/css/font/新細明體v7.03(R).ttf');
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -64,8 +64,6 @@ html{
 }
 @media print {
   .resume_about {
-    margin-bottom: 400px !important;
-    height: 800px !important;
     margin-bottom: 400px !important;
   }
 
