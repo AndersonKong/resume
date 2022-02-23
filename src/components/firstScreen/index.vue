@@ -1,33 +1,5 @@
 <template>
   <div class="first-screen" id="first-screen">
-    <!-- <div style="position:sticky;top:10px;left:0;color:blue;z-index:999;width:100%;">
-      <a style="padding:10px;" href="#second-screen">Resume</a>
-      <a style="padding:10px;" href="#three-screen">Skill</a>
-   </div> -->
-    <!-- <div class="menu">
-      <div class="menu-content" ref="menuContent" :class="{ show: isShow }">
-        <ul>
-          <li><a href="#second-screen">Resume</a></li>
-          <li><a href="#three-screen">Skill</a></li>
-          <li><a href="#four-screen">Works</a></li>
-        </ul>
-      </div>
-
-      <div class="menu-button" @click="menuShow">
-        <span
-          class="menu-global menu-top"
-          :class="{ 'menu-top-click': isShow }"
-        ></span>
-        <span
-          class="menu-global menu-middle"
-          :class="{ 'menu-middle-click': isShow }"
-        ></span>
-        <span
-          class="menu-global menu-bottom"
-          :class="{ 'menu-bottom-click': isShow }"
-        ></span>
-      </div>
-    </div> -->
     <div class="background"></div>
     <div class="first-container">
       <div class="navigation">

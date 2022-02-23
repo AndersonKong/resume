@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7684930",
+      "name": "skill",
+      "font_class": "skill1",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "6265099",
+      "name": "简历",
+      "font_class": "resume-line",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "17722019",
+      "name": "作品",
+      "font_class": "zuopin",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "20830746",
       "name": "rocket",
       "font_class": "rocket",
