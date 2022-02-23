@@ -1,5 +1,5 @@
 <template>
-  <div class="firstScreen">
+  <div class="first-screen" id="first-screen">
     <div class="background"></div>
     <div class="first-container">
       <div class="navigation">
@@ -97,7 +97,7 @@ export default {
 <style lang="less" scope>
 @import '~@/assets/css/codepf.css';
 @color: #495057;
-.firstScreen {
+.first-screen {
   width: 100vw;
   height: 100vh;
   // padding: 150px;

@@ -29,6 +29,7 @@ export default {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  scroll-behavior: smooth;
   // max-width: 1080px;
 }
 @media (max-width: 1080px) {
@@ -64,9 +65,7 @@ export default {
     height: 800px !important;
     margin-bottom: 400px !important;
   }
-  .second-screen .avatar-box span:nth-child(3) {
-    background-color: red !important;
-  }
+
   .download_container {
     display: none !important;
   }
