@@ -1,6 +1,7 @@
 <template>
   <div class="container" id="app">
     <rocket />
+    <bottom-menu />
     <firstScreen />
     <secondScreen />
     <threeScreen />
@@ -13,6 +14,7 @@ export default {
   name: 'App',
   components: {
     rocket: () => import('@/components/rocket'),
+    bottomMenu: () => import('@/components/menu'),
     firstScreen: () => import('@/components/firstScreen'),
     secondScreen: () => import('@/components/secondScreen'),
     threeScreen: () => import('@/components/threeScreen'),
@@ -40,6 +42,9 @@ html {
   // max-width: 1080px;
 }
 @media (max-width: 1080px) {
+  .menu {
+    display: block !important;
+  }
   // 第一页
   .firstScreen {
     // padding: 50px !important;
