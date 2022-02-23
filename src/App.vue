@@ -3,6 +3,7 @@
     <firstScreen />
     <secondScreen />
     <threeScreen />
+    <fourScreen />
   </div>
 </template>
 
@@ -12,7 +13,8 @@ export default {
   components: {
     firstScreen: () => import('@/components/firstScreen'),
     secondScreen: () => import('@/components/secondScreen'),
-    threeScreen: () => import('@/components/threeScreen')
+    threeScreen: () => import('@/components/threeScreen'),
+    fourScreen: () => import('@/components/fourScreen')
   }
 }
 </script>
@@ -60,6 +62,9 @@ html {
   .download_container {
     // display: none !important;
     visibility: hidden;
+  }
+  .menu {
+    display: block !important;
   }
 }
 @media print {

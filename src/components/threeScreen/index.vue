@@ -1,8 +1,8 @@
 <template>
   <div class="three-screen" id="three-screen">
     <div class="content-box">
-      <t-row style="height: 100%">
-        <t-col :md="6" style="height: 100%">
+      <t-row style="height:100%;">
+        <t-col :md="6" style="height:100%;">
           <div class="skill_left">
             <div class="personal_intro">
               <span>
@@ -67,7 +67,7 @@
             </div>
           </div>
         </t-col>
-        <t-col :md="6" style="height: 100%">
+        <t-col :md="6" style="height:100%;">
           <div class="skill_right">
             <div class="download_container">
               <div class="download">
@@ -121,21 +121,19 @@
 
 <script>
 export default {
-  name: "threeScreen",
+  name: 'threeScreen',
   data: () => ({}),
   methods: {},
-  mounted() {},
-};
+  mounted () {}
+}
 </script>
 <style lang="less" scoped>
 @font-color: #505050;
-// @font-low-color: #bbbec0;
-@font-low-color: #8d9297;
+@font-low-color: #bbbec0;
 @color: #ffd43b;
 
 .three-screen {
   width: 100vw;
-  background-color: #e4eaef;
   // height: 100vh;
   .content-box {
     max-width: 1080px;
@@ -148,17 +146,15 @@ export default {
       flex-direction: column;
       width: 100%;
       height: 100%;
-      padding-right: 30px;
       max-width: 1080px;
       .personal_intro {
-        // height: 30%;
-        margin-bottom: 20px;
+        height: 30%;
         display: flex;
         flex-direction: column;
         span {
           word-break: break-all;
           line-height: 28px;
-          // text-indent: 2em;
+          text-indent: 2em;
           &:nth-child(1) {
             color: @font-color;
             font-size: 30px;
@@ -171,7 +167,6 @@ export default {
             color: @font-low-color;
             font-size: 16px;
             letter-spacing: 1px;
-            text-indent: 2em;
           }
         }
       }
@@ -206,11 +201,6 @@ export default {
                 height: 14px;
                 border-radius: 10px;
                 background-color: #adb5bd;
-                //google chrome explore
-                -webkit-print-color-adjust: exact;
-                //firefox explore
-                -moz-print-color-adjust: exact;
-                color-adjust: exact;
                 span {
                   width: 80%;
                   height: 100%;
@@ -232,12 +222,11 @@ export default {
       display: flex;
       flex-direction: column;
       .download_container {
-        height: calc(30% + 4px);
-        margin-bottom: 30px;
+        height: 30%;
         .download {
           display: flex;
           margin-left: auto;
-          margin-top: 140px;
+          margin-top: 50px;
           width: 300px;
           height: 100px;
           div {

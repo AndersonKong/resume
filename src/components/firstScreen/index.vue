@@ -1,9 +1,33 @@
 <template>
   <div class="first-screen" id="first-screen">
-    <div style="position:sticky;top:10px;left:0;color:blue;z-index:999;width:100%;">
+    <!-- <div style="position:sticky;top:10px;left:0;color:blue;z-index:999;width:100%;">
       <a style="padding:10px;" href="#second-screen">Resume</a>
       <a style="padding:10px;" href="#three-screen">Skill</a>
-   </div>
+   </div> -->
+    <div class="menu">
+      <div class="menu-content" ref="menuContent" :class="{ show: isShow }">
+        <ul>
+          <li><a href="#second-screen">Resume</a></li>
+          <li><a href="#three-screen">Skill</a></li>
+          <li><a href="#four-screen">Works</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-button" @click="menuShow">
+        <span
+          class="menu-global menu-top"
+          :class="{ 'menu-top-click': isShow }"
+        ></span>
+        <span
+          class="menu-global menu-middle"
+          :class="{ 'menu-middle-click': isShow }"
+        ></span>
+        <span
+          class="menu-global menu-bottom"
+          :class="{ 'menu-bottom-click': isShow }"
+        ></span>
+      </div>
+    </div>
     <div class="background"></div>
     <div class="first-container">
       <div class="navigation">
@@ -11,7 +35,11 @@
           <div>
             <img src="@/assets/images/navigation.svg" style="width: 60vw" />
           </div>
-          <div>RESUME</div>
+          <div>
+            <a href="#second-screen">Resume</a>
+            <a href="#three-screen">Skill</a>
+            <a href="#four-screen">Works</a>
+          </div>
         </div>
         <div class="nav_right">
           <span>Anderson Kong</span>
@@ -93,6 +121,25 @@ function init () {
 
 export default {
   name: 'firstScreen',
+  data: () => ({
+    isClicking: true,
+    isShow: false
+  }),
+  methods: {
+    menuShow () {
+      if (this.isClicking) {
+        this.isShow = true
+        console.log(this.$refs.menuContent)
+        $('.menu-content').slideDown()
+        // this.$refs.menuContent.style.height = `100%`
+        this.isClicking = false
+      } else if (this.isClicking === false) {
+        this.isShow = false
+        this.isClicking = true
+        $('.menu-content').slideUp()
+      }
+    }
+  },
   mounted () {
     init()
   }
@@ -107,6 +154,83 @@ export default {
   // padding: 150px;
   display: flex;
   flex-direction: column;
+  .menu {
+    width: 100%;
+    height: 50%;
+    z-index: 4;
+    display: none;
+    position: absolute;
+    .menu-button {
+      cursor: pointer;
+      // margin: 0 auto;
+      padding-left: 1.25em;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+      margin-top: 10px;
+      .menu-global {
+        backface-visibility: hidden;
+        position: absolute;
+        left: 0;
+        border-top: 7px solid #212529;
+        width: 100%;
+        transition: 0.55s;
+        // background-color: #212121;
+      }
+      .menu-top {
+        top: 0;
+      }
+      .menu-middle {
+        top: 18px;
+      }
+      .menu-bottom {
+        top: 36px;
+      }
+      .menu-top-click {
+        backface-visibility: hidden;
+        top: 15px;
+        transform: rotate(50deg);
+        transition: 0.55s 0.5s;
+      }
+      .menu-middle-click {
+        opacity: 0;
+      }
+      .menu-bottom-click {
+        backface-visibility: hidden;
+        top: 15px;
+        transform: rotate(-410deg);
+        transition: 0.35s 0.3s;
+      }
+    }
+    .menu-content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: none;
+      background-color: #495057;
+      ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 50px;
+        transition: 1s;
+        li {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          a {
+            color: #f7f7f7;
+            font-size: 30px;
+            padding: 20px 0;
+            letter-spacing: 4px;
+          }
+        }
+      }
+    }
+  }
   .first-container {
     display: flex;
     flex-direction: column;
@@ -122,6 +246,16 @@ export default {
         display: flex;
         flex-direction: column;
         user-select: none;
+        div {
+          &:nth-child(2) {
+            display: flex;
+            a {
+              padding: 0 10px;
+              font-size: 20px;
+              color: @color;
+            }
+          }
+        }
       }
       .nav_right {
         z-index: 2;
