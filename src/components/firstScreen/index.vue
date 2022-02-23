@@ -1,5 +1,9 @@
 <template>
-  <div class="firstScreen">
+  <div class="first-screen" id="first-screen">
+    <div style="position:sticky;top:10px;left:0;color:blue;z-index:999;width:100%;">
+      <a style="padding:10px;" href="#second-screen">Resume</a>
+      <a style="padding:10px;" href="#three-screen">Skill</a>
+   </div>
     <div class="background"></div>
     <div class="first-container">
       <div class="navigation">
@@ -97,7 +101,7 @@ export default {
 <style lang="less" scope>
 @import '~@/assets/css/codepf.css';
 @color: #495057;
-.firstScreen {
+.first-screen {
   width: 100vw;
   height: 100vh;
   // padding: 150px;

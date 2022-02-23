@@ -23,6 +23,10 @@ export default {
   src: url('~@/assets/css/font/新細明體v7.03(R).ttf');
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .container {
   margin: 0 auto;
   display: flex;
@@ -64,9 +68,7 @@ export default {
     height: 800px !important;
     margin-bottom: 400px !important;
   }
-  .second-screen .avatar-box span:nth-child(3) {
-    background-color: red !important;
-  }
+
   .download_container {
     display: none !important;
   }

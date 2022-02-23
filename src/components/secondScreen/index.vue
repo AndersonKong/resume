@@ -1,5 +1,5 @@
 <template>
-  <div class="second-screen">
+  <div class="second-screen" id="second-screen">
     <div class="resume">
       <div class="resume-header">
         <div class="avatar-box">
@@ -127,7 +127,7 @@ export default {
 .second-screen {
   width: 100vw;
   // height: 100vh;
-  margin: 60px 20px;
+  padding: 60px 20px;
   // background-color: #202020;
   // color: #fff;
   display: flex;
@@ -163,7 +163,9 @@ export default {
       transform: translate(-50px, 120px) scale(1);
       z-index: -2;
       border-radius: 50%;
-      //google chrome explore -webkit-print-color-adjust: exact; //firefox explore
+      //google chrome explore 
+      -webkit-print-color-adjust: exact; 
+      //firefox explore
       -moz-print-color-adjust: exact;
       color-adjust: exact;
 
