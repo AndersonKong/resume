@@ -1,5 +1,9 @@
 <template>
   <div class="first-screen" id="first-screen">
+    <div style="position:sticky;top:10px;left:0;color:blue;z-index:999;width:100%;">
+      <a style="padding:10px;" href="#second-screen">Resume</a>
+      <a style="padding:10px;" href="#three-screen">Skill</a>
+   </div>
     <div class="background"></div>
     <div class="first-container">
       <div class="navigation">

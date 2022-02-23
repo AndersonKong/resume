@@ -129,11 +129,13 @@ export default {
 </script>
 <style lang="less" scoped>
 @font-color: #505050;
-@font-low-color: #bbbec0;
+// @font-low-color: #bbbec0;
+@font-low-color: #8d9297;
 @color: #ffd43b;
 
 .three-screen {
   width: 100vw;
+  background-color: #e4eaef;
   // height: 100vh;
   .content-box {
     max-width: 1080px;

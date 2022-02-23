@@ -23,13 +23,16 @@ export default {
   src: url('~@/assets/css/font/新細明體v7.03(R).ttf');
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  scroll-behavior: smooth;
   // max-width: 1080px;
 }
 @media (max-width: 1080px) {

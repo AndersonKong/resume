@@ -127,7 +127,7 @@ export default {
 .second-screen {
   width: 100vw;
   // height: 100vh;
-  margin: 60px 20px;
+  padding: 60px 20px;
   // background-color: #202020;
   // color: #fff;
   display: flex;
