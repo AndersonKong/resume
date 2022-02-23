@@ -130,7 +130,7 @@ export default {
 <style lang="less" scoped>
 @font-color: #505050;
 @font-low-color: #bbbec0;
-@color: #ffd43b;
+@color: #3e82f7;
 
 .three-screen {
   width: 100vw;
