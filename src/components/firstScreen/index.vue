@@ -134,6 +134,7 @@ export default {
   // padding: 150px;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
   .menu {
     width: 100%;
     height: 50%;
