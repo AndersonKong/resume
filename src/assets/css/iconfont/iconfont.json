@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "20830746",
+      "name": "rocket",
+      "font_class": "rocket",
+      "unicode": "e716",
+      "unicode_decimal": 59158
+    },
+    {
       "icon_id": "10199156",
       "name": "展开",
       "font_class": "zhankai",

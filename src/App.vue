@@ -1,5 +1,6 @@
 <template>
   <div class="container" id="app">
+    <rocket />
     <firstScreen />
     <secondScreen />
     <threeScreen />
@@ -11,6 +12,7 @@
 export default {
   name: 'App',
   components: {
+    rocket: () => import('@/components/rocket'),
     firstScreen: () => import('@/components/firstScreen'),
     secondScreen: () => import('@/components/secondScreen'),
     threeScreen: () => import('@/components/threeScreen'),
@@ -62,9 +64,6 @@ html {
   .download_container {
     // display: none !important;
     visibility: hidden;
-  }
-  .menu {
-    display: block !important;
   }
 }
 @media print {

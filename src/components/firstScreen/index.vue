@@ -4,7 +4,7 @@
       <a style="padding:10px;" href="#second-screen">Resume</a>
       <a style="padding:10px;" href="#three-screen">Skill</a>
    </div> -->
-    <div class="menu">
+    <!-- <div class="menu">
       <div class="menu-content" ref="menuContent" :class="{ show: isShow }">
         <ul>
           <li><a href="#second-screen">Resume</a></li>
@@ -27,7 +27,7 @@
           :class="{ 'menu-bottom-click': isShow }"
         ></span>
       </div>
-    </div>
+    </div> -->
     <div class="background"></div>
     <div class="first-container">
       <div class="navigation">
@@ -89,6 +89,14 @@ function init () {
   window.onblur = function () {
     isPaused = true
   }.bind(this)
+
+  window.addEventListener(
+    'visibilitychange',
+    function () {
+      if (document.hidden) isPaused = true
+    }.bind(this)
+  )
+
   window.onfocus = function () {
     isPaused = false
   }.bind(this)
