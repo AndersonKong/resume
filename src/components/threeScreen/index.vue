@@ -146,6 +146,7 @@ export default {
       flex-direction: column;
       width: 100%;
       height: 100%;
+      padding-right:30px;
       max-width: 1080px;
       .personal_intro {
         height: 30%;
