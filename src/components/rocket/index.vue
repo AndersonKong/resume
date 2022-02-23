@@ -22,7 +22,7 @@ export default {
     },
     init () {
       this.height = 0
-      thi
+      this.$refs.rocket.style.display = 'block'
     }
   }
 }
