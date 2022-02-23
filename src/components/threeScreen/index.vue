@@ -186,7 +186,7 @@ export default {
             display: flex;
             flex-direction: column;
             li {
-              width: 100%;
+              width: 90%;
               display: flex;
               flex-direction: column;
               margin-bottom: 20px;
