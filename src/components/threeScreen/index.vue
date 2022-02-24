@@ -144,7 +144,7 @@ export default {
     padding: 50px 50px;
 
     .personal_intro {
-      // height: 30%;
+      width: 90%;
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
