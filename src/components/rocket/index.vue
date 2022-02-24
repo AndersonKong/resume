@@ -8,7 +8,6 @@
 
 <script>
 window.addEventListener('scroll', function () {
-  console.log(window.scrollY)
   if (window.scrollY > 200) {
     window.show()
   } else if (window.scrollY == 0) {
