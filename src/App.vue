@@ -79,6 +79,10 @@ html {
   .download_container {
     display: none !important;
   }
+  .menu,
+  .rocket {
+    display: none !important;
+  }
 }
 @media (min-width: 1080px) {
   .three-screen {

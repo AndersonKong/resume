@@ -28,5 +28,24 @@
             transition:transform .75s  cubic-bezier(0.175, 0.885, 0.32, 1.275 );
         }
     </style>
+
+    <script>
+        var name = "windowsName";
+        let con = document.querySelector('.container');
+
+        con.addEventListener('click',()=>{
+            console.log(this);
+        })
+    function a() {
+        var name = "Cherry";
+
+        console.log(this.name);          // windowsName
+
+        console.log("inner:" + this);    // inner: Window
+    }
+    a();
+    console.log("outer:" + this)         // outer: Window
+
+    </script>
 </body>
 </html>

@@ -137,6 +137,7 @@ export default {
 .three-screen {
   width: 100vw;
   // height: 100vh;
+  margin-top: 80px;
   .content-box {
     max-width: 1080px;
     height: 100%;
@@ -198,6 +199,11 @@ export default {
               height: 14px;
               border-radius: 10px;
               background-color: #adb5bd;
+              //google chrome explore
+              -webkit-print-color-adjust: exact;
+              //firefox explore
+              -moz-print-color-adjust: exact;
+
               span {
                 width: 80%;
                 height: 100%;
