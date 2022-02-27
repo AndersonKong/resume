@@ -298,29 +298,6 @@ export default {
     }
   }
 
-  .background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #edf3f8;
-    background: -moz-radial-gradient(
-      center,
-      ellipse cover,
-      #edf3f8 1%,
-      #dee3e8 100%
-    );
-    background: -webkit-radial-gradient(
-      center,
-      ellipse cover,
-      #edf3f8 1%,
-      #dee3e8 100%
-    );
-    background: radial-gradient(ellipse at center, #edf3f8 1%, #dee3e8 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(
-startColorstr="#edf3f8", endColorstr="#dee3e8",GradientType=1 );
-  }
   @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600');
   .more-pens {
     position: fixed;

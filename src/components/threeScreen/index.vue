@@ -138,10 +138,15 @@ export default {
   width: 100vw;
   // height: 100vh;
   margin-top: 80px;
+  // background-color: #5b7599;
+  display: flex;
+  align-items: center;
+
   .content-box {
     max-width: 1080px;
-    height: 100%;
+    // height: 100%;
     margin: 0 auto;
+    margin-top: 30px;
     padding: 50px 50px;
 
     .personal_intro {
