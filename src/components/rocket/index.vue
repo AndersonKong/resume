@@ -7,13 +7,37 @@
 </template>
 
 <script>
-window.addEventListener('scroll', function () {
+function rocketShow () {
   if (window.scrollY > 200) {
     window.show()
-  } else if (window.scrollY == 0) {
+  } else if (window.scrollY <= 20) {
     window.init()
   }
-})
+}
+function throttle (func, delay) {
+  var last = 0
+  return function () {
+    var now = Date.now()
+    if (now >= delay + last) {
+      func.apply(this, arguments)
+      last = now
+    } else {
+      console.log('距离上次调用的时间差不满足要求哦')
+    }
+  }
+}
+
+function debounce (func, delay) {
+  var timeout
+  return function () {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
+      func.apply(this, arguments)
+    }, delay)
+  }
+}
+
+window.addEventListener('scroll', throttle(rocketShow, 100))
 export default {
   name: 'index',
   data: () => ({

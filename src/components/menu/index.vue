@@ -19,6 +19,12 @@
           <span>作品</span>
         </a>
       </li>
+      <li>
+        <a href="#four-screen">
+          <i class="iconfont icon-evaluate"></i>
+          <span>评价</span>
+        </a>
+      </li>
     </ul>
   </div>
 </template>

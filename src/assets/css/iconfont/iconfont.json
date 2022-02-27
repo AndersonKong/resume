@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "27188282",
+      "name": "evaluate",
+      "font_class": "evaluate",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
       "icon_id": "7684930",
       "name": "skill",
       "font_class": "skill1",

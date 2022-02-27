@@ -28,6 +28,9 @@
             <span class="label">钉钉: </span
             ><span>AndersonKong@hotmail.com</span>
           </div>
+          <div class="QRcode">
+            <img src="@/assets/images/QRcode.jpg" alt="" />
+          </div>
         </t-col>
         <t-col :md="6">
           <div class="dev_experience">
@@ -163,8 +166,8 @@ export default {
       transform: translate(-50px, 120px) scale(1);
       z-index: -2;
       border-radius: 50%;
-      //google chrome explore 
-      -webkit-print-color-adjust: exact; 
+      //google chrome explore
+      -webkit-print-color-adjust: exact;
       //firefox explore
       -moz-print-color-adjust: exact;
       color-adjust: exact;
@@ -233,6 +236,13 @@ export default {
         color: @font-color;
         padding-bottom: 32px;
         font-weight: 700;
+      }
+    }
+    .QRcode {
+      width: 100%;
+      img {
+        width: 400px;
+        height: 400px;
       }
     }
 

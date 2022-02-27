@@ -6,6 +6,7 @@
     <secondScreen />
     <threeScreen />
     <fourScreen />
+    <fiveScreen />
   </div>
 </template>
 
@@ -18,7 +19,8 @@ export default {
     firstScreen: () => import('@/components/firstScreen'),
     secondScreen: () => import('@/components/secondScreen'),
     threeScreen: () => import('@/components/threeScreen'),
-    fourScreen: () => import('@/components/fourScreen')
+    fourScreen: () => import('@/components/fourScreen'),
+    fiveScreen: () => import('@/components/fiveScreen')
   }
 }
 </script>
@@ -73,7 +75,15 @@ html {
 }
 @media print {
   .resume_about {
-    margin-bottom: 400px !important;
+    // margin-bottom: 400px !important;
+  }
+
+  .QRcode {
+    img {
+      width: 300px !important;
+      height: 300px !important;
+      margin-bottom: 50px;
+    }
   }
 
   .download_container {

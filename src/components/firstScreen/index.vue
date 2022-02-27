@@ -11,6 +11,7 @@
             <a href="#second-screen">Resume</a>
             <a href="#three-screen">Skill</a>
             <a href="#four-screen">Works</a>
+            <a href="#five-screen">Eval</a>
           </div>
         </div>
         <div class="nav_right">
@@ -134,7 +135,6 @@ export default {
   // padding: 150px;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
   .menu {
     width: 100%;
     height: 50%;
@@ -227,8 +227,8 @@ export default {
         display: flex;
         flex-direction: column;
         user-select: none;
-        .nav_menu{
-          a:hover{
+        .nav_menu {
+          a:hover {
             color: #fdbd00;
           }
         }
