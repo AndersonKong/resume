@@ -1,5 +1,43 @@
 <template>
-  <div class="five-screen" id="five-screen">123</div>
+  <div class="five-screen" id="five-screen">
+    <div class="footer">
+      <div class="footer-contact">
+        <div class="contact contact-wechat">
+          <span class="contact-icon">
+            <i class="iconfont icon-wechat"></i>
+          </span>
+          <div class="contact-msg">
+            <span>微信</span>
+            <span>Anderson-Kong</span>
+          </div>
+        </div>
+        <div class="contact contact-email">
+          <span class="contact-icon">
+            <i class="iconfont icon-email"></i>
+          </span>
+          <div class="contact-msg">
+            <span>邮箱</span>
+            <span>AndersonKong@hotmail.com</span>
+          </div>
+        </div>
+        <div class="contact contact-phone">
+          <span class="contact-icon">
+            <i class="iconfont icon-phone"></i>
+          </span>
+          <div class="contact-msg">
+            <span>电话</span>
+            <span>18927912786</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-eval">
+        <div class="eval-title">个人简介</div>
+        <div class="eval-content">
+          兴趣是最好的老师，通过自学手段，掌握了部分前端技术并且拥有自己的理解，从静态文本标签到网页交互脚本，不断挑战自我，学习了Javscript基础以及使用Vue等框架，对后端也有着PHP+Python的不同程度学习，相信自己能对未来的工作付诸更多的努力，积极参与团队项目。
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -9,4 +47,77 @@ export default {
   methods: {}
 }
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.five-screen {
+  width: 100%;
+  background-color: #495057;
+
+  .footer {
+    max-width: 1080px;
+    padding: 50px;
+    margin: 0 auto;
+    .footer-contact {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .contact {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 2px solid #e9ecef;
+        border-radius: 4px;
+        margin-bottom: 40px;
+        .contact-icon {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #fff;
+          border: 5px solid #212529;
+          margin-right: 30px;
+          flex-shrink: 1;
+          i {
+            font-size: 16px;
+            color: #212529;
+          }
+        }
+        .contact-msg {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          span {
+            display: flex;
+            color: #e9ecef;
+            font-size: 14px;
+            &:nth-child(1) {
+              font-size: 18px;
+              font-weight: 700;
+              padding-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+    .footer-eval {
+      display: flex;
+      flex-direction: column;
+      .eval-title {
+        font-size: 40px;
+        color: #e9ecef;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .eval-content {
+        font-size: 16px;
+        color: #e9ecef;
+        letter-spacing: 2px;
+        text-indent: 2;
+        line-height: 25px;
+      }
+    }
+  }
+}
+</style>

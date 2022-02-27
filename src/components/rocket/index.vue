@@ -7,14 +7,9 @@
 </template>
 
 <script>
-function rocketShow () {
-  if (window.scrollY > 200) {
-    window.show()
-  } else if (window.scrollY <= 20) {
-    window.init()
-  }
-}
+function rocketShow () {}
 function throttle (func, delay) {
+  console.log(window.scrollY)
   var last = 0
   return function () {
     var now = Date.now()
@@ -37,7 +32,13 @@ function debounce (func, delay) {
   }
 }
 
-window.addEventListener('scroll', throttle(rocketShow, 100))
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 200) {
+    window.show()
+  } else if (window.scrollY <= 20) {
+    window.init()
+  }
+})
 export default {
   name: 'index',
   data: () => ({
@@ -62,6 +63,7 @@ export default {
   mounted () {
     window.init = this.init
     window.show = this.show
+    window.menu = document.querySelector('.menu')
   }
 }
 </script>

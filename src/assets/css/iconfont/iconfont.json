@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "911017",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "1262361",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e738",
+      "unicode_decimal": 59192
+    },
+    {
+      "icon_id": "18967152",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
       "icon_id": "27188282",
       "name": "evaluate",
       "font_class": "evaluate",

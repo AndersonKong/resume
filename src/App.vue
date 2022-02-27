@@ -47,6 +47,9 @@ html {
   .menu {
     display: block !important;
   }
+  .container {
+    margin-bottom: 100px !important;
+  }
   // 第一页
   .firstScreen {
     // padding: 50px !important;
@@ -72,11 +75,22 @@ html {
     // display: none !important;
     visibility: hidden;
   }
+
+  // 第五页
+  .footer-contact {
+    flex-direction: column !important;
+  }
+  .contact-icon {
+    margin-right: 10px !important;
+  }
+  .contact-msg {
+    padding: 0 !important;
+  }
 }
 @media print {
-  .resume_about {
-    // margin-bottom: 400px !important;
-  }
+  // .resume_about {
+  //   margin-bottom: 400px !important;
+  // }
 
   .QRcode {
     img {
@@ -91,12 +105,17 @@ html {
   }
   .menu,
   .rocket {
-    display: none !important;
+    display: none;
   }
 }
 @media (min-width: 1080px) {
   .three-screen {
     height: 100vh !important;
+  }
+}
+@media (max-width: 750px) {
+  .menu ul li a {
+    font-size: 12px !important;
   }
 }
 </style>

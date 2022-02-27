@@ -279,7 +279,7 @@ export default {
             height: @circle-size;
             box-sizing: border-box;
             border-radius: 50%;
-            border: @circle-width solid #495057;
+            border: @circle-width solid #a6b0bb;
             position: relative;
             display: flex;
             justify-content: center;

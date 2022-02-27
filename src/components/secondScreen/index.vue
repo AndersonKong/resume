@@ -116,9 +116,19 @@
 </template>
 
 <script>
+import data from '@/database/index.json'
 export default {
   name: 'secondScreen',
-  data: () => ({})
+  data: () => ({}),
+  methods: {
+    showData: () => {
+      const { about } = data.data
+      console.log(about)
+    }
+  },
+  mounted () {
+    this.showData()
+  }
 }
 </script>
 <style lang="less" scope>
