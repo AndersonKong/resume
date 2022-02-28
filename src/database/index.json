@@ -9,13 +9,18 @@
       "dingtalk": "AndersonKong@hotmail.com"
     },
     "experience": {
-      "describe": [
-        "使用Vue-Cli脚手架开发基于CMS(Content Management System)的前端项目,熟练使用VueRoute,VueX，Axios等技术",
-        "使用JQuery编写页面交互效果以及GSAP动画插件制作的页面动态展示效果",
-        "在校期间参与了WEB仿站的团队项目，制作了仿新浪微博PC端和移动端的网页应用，个人分工部分参与了Laravel（PHP框架）以及Vue的使用及开发",
-        "使用MasterGO等产品设计软件，参与了页面以及交互设计"
-      ],
-      "details": [[], [], [], []]
+        "describe":[
+            "使用Vue-Cli脚手架开发基于CMS(Content Management System)的前端项目,熟练使用VueRoute,VueX，Axios等技术",
+            "使用JQuery编写页面交互效果以及GSAP动画插件制作的页面动态展示效果",
+            "在校期间参与了WEB仿站的团队项目，制作了仿新浪微博PC端和移动端的网页应用，个人分工部分参与了Laravel（PHP框架）以及Vue的使用及开发",
+            "使用MasterGO等产品设计软件，参与了页面以及交互设计"
+        ],
+        "details":[
+            [],
+            [],
+            [],
+            []
+        ]
     }
   }
 }

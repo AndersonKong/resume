@@ -117,5 +117,8 @@ html {
   .menu ul li a {
     font-size: 12px !important;
   }
+  .modal_content {
+    height: 600px !important;
+  }
 }
 </style>
