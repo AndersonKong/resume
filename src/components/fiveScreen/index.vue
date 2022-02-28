@@ -8,7 +8,7 @@
           </span>
           <div class="contact-msg">
             <span>微信</span>
-            <span>Anderson-Kong</span>
+            <span>{{contact.wechat}}</span>
           </div>
         </div>
         <div class="contact contact-email">
@@ -17,7 +17,7 @@
           </span>
           <div class="contact-msg">
             <span>邮箱</span>
-            <span>AndersonKong@hotmail.com</span>
+            <span>{{contact.email}}</span>
           </div>
         </div>
         <div class="contact contact-phone">
@@ -26,14 +26,14 @@
           </span>
           <div class="contact-msg">
             <span>电话</span>
-            <span>18927912786</span>
+            <span>{{contact.mobile}}</span>
           </div>
         </div>
       </div>
       <div class="footer-eval">
-        <div class="eval-title">个人简介</div>
+        <div class="eval-title">个人评价</div>
         <div class="eval-content">
-          兴趣是最好的老师，通过自学手段，掌握了部分前端技术并且拥有自己的理解，从静态文本标签到网页交互脚本，不断挑战自我，学习了Javscript基础以及使用Vue等框架，对后端也有着PHP+Python的不同程度学习，相信自己能对未来的工作付诸更多的努力，积极参与团队项目。
+          {{eval}}
         </div>
       </div>
     </div>
@@ -43,7 +43,15 @@
 <script>
 export default {
   name: 'fiveScreen',
-  data: () => ({}),
+  data: () => ({
+    contact:{
+      wechat:"Anderson-Kong",
+      email:"AndersonKong@hotmail.com",
+      mobile:"18927912786"
+    },
+    eval:"兴趣是最好的老师，通过自学手段，掌握了部分前端技术并且拥有自己的理解，从静态文本标签到网页交互脚本，不断挑战自我，学习了Javscript基础以及使用Vue等框架，对后端也有着PHP+Python的不同程度学习，相信自己能对未来的工作付诸更多的努力，积极参与团队项目"
+    
+  }),
   methods: {}
 }
 </script>

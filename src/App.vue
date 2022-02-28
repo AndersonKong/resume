@@ -105,7 +105,7 @@ html {
   }
   .menu,
   .rocket {
-    display: none;
+    display: none !important;
   }
 }
 @media (min-width: 1080px) {
