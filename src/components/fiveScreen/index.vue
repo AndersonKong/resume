@@ -113,7 +113,7 @@ export default {
       display: flex;
       flex-direction: column;
       .eval-title {
-        font-size: 34px;
+        font-size: 30px;
         color: #e9ecef;
         font-weight: 700;
         margin-bottom: 20px;
