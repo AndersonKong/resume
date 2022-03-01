@@ -136,7 +136,7 @@ export default {
   width: 100vw;
   // height: 100vh;
   margin-top: 80px;
-  // background-color: #5b7599;
+  background-color: #e6ebf0;
   display: flex;
   align-items: center;
 

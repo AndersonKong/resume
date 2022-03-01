@@ -1,6 +1,13 @@
 <template>
   <div class="five-screen" id="five-screen">
     <div class="footer">
+
+      <div class="footer-eval">
+        <div class="eval-title">个人评价</div>
+        <div class="eval-content">
+          {{ eval }}
+        </div>
+      </div>
       <div class="footer-contact">
         <div class="contact contact-wechat">
           <span class="contact-icon">
@@ -28,12 +35,6 @@
             <span>电话</span>
             <span>{{ contact.mobile }}</span>
           </div>
-        </div>
-      </div>
-      <div class="footer-eval">
-        <div class="eval-title">个人评价</div>
-        <div class="eval-content">
-          {{ eval }}
         </div>
       </div>
     </div>
@@ -76,6 +77,16 @@ export default {
         border: 2px solid #e9ecef;
         border-radius: 4px;
         margin-bottom: 40px;
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover{
+          border-color: #fdbd00;
+          .contact-icon{
+            background-color: #fdbd00;
+          }
+          .contact-msg span{
+            color: #fdbd00;
+          }
+        }
         .contact-icon {
           width: 60px;
           height: 60px;
@@ -91,6 +102,7 @@ export default {
             font-size: 16px;
             color: #212529;
           }
+          transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
         .contact-msg {
           display: flex;
@@ -105,6 +117,7 @@ export default {
               font-weight: 700;
               padding-bottom: 20px;
             }
+            transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
           }
         }
       }
@@ -112,9 +125,10 @@ export default {
     .footer-eval {
       display: flex;
       flex-direction: column;
+      margin-bottom: 40px;
       .eval-title {
-        font-size: 30px;
-        color: #e9ecef;
+        font-size: 28px;
+        color: #fdbd00;
         font-weight: 700;
         margin-bottom: 20px;
       }
@@ -122,7 +136,7 @@ export default {
         font-size: 16px;
         color: #e9ecef;
         letter-spacing: 1px;
-        text-indent: 2;
+        text-indent: 2em;
         line-height: 25px;
       }
     }

@@ -59,6 +59,7 @@ export default {
 <style lang="less" scoped>
 .four-screen {
   width: 100%;
+  padding: 60px 0;
   position: relative;
   .four-screen-container {
     width: 100%;
