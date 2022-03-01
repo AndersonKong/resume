@@ -75,6 +75,9 @@ html {
     // display: none !important;
     visibility: hidden;
   }
+  .content-box {
+    padding: 20px !important;
+  }
 
   // 第五页
   .footer-contact {

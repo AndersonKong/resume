@@ -2,8 +2,8 @@
   <div class="modal_container" v-if="view">
     <div class="modal">
       <div class="modal_content">
-        <div class="close-icon">
-          <i class="iconfont icon-zhankai close" @click="close"></i>
+        <div class="close-icon" @click="close">
+          <i class="iconfont icon-zhankai close"></i>
         </div>
         <img :src="url" />
       </div>
@@ -57,6 +57,7 @@ export default {
     margin: 0 auto;
     max-width: 80vw;
     overflow-y: auto;
+    position: relative;
     // max-height: 50vh;
     img {
       width: auto;
@@ -64,7 +65,6 @@ export default {
       //   height: 100%;
       object-fit: cover;
       user-select: none;
-      position: relative;
     }
     .close-icon {
       background-color: #000;

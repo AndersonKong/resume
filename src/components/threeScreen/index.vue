@@ -8,7 +8,7 @@
               勤奋是学习的枝叶，当然很苦，智慧是学习的花朵，当然香郁。
               <!-- 来自广东省汕尾市,就读于广东工贸职业技术学院【专科学历应届生】。 -->
             </span>
-            <span>{{introduce}}</span>
+            <span>{{ introduce }}</span>
           </div>
         </t-col>
         <t-col :md="6"
@@ -16,7 +16,9 @@
             <div class="download">
               <div>Download Resume.docx</div>
               <div>
-                <i class="iconfont icon-xiazai"></i>
+                <a>
+                  <i class="iconfont icon-xiazai"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -28,10 +30,10 @@
             <div class="skill-title">技术</div>
             <div class="progress-bar">
               <ul>
-                <li v-for="(item,index) in skill" :key="index">
+                <li v-for="(item, index) in skill" :key="index">
                   <div class="progress-val">
-                    <span>{{item.name}}</span>
-                    <span>{{item.mastery}}</span>
+                    <span>{{ item.name }}</span>
+                    <span>{{ item.mastery }}</span>
                   </div>
                   <div class="bar">
                     <span ref="masteryBar"></span>
@@ -45,14 +47,14 @@
           <div class="core_skills">
             <div class="core-skill-title">核心技术</div>
             <ul>
-              <li v-for="(item,index) in coreSkill" :key="index"> 
+              <li v-for="(item, index) in coreSkill" :key="index">
                 <div class="circle-bar">
                   <svg>
                     <circle ref="circle"></circle>
                   </svg>
-                  <div>{{item.mastery}}</div>
+                  <div>{{ item.mastery }}</div>
                 </div>
-                <div class="core_skills_name">{{item.name}}</div>
+                <div class="core_skills_name">{{ item.name }}</div>
               </li>
             </ul>
           </div>
@@ -66,56 +68,59 @@
 export default {
   name: 'threeScreen',
   data: () => ({
-    introduce:"大学期间出于对于编程的喜爱，两年以来通过互联网和校内团体接触了Web开发，秉着对编程从0到1的成就感，让我对前端网页开发这个方向产生了浓厚的兴趣和求知欲。在校内参与过社团的小项目，接触了前后端的领域，积累了Web开发的基础。",
-    skill:[
-        {
-          name:"CSS3，Sass，Less",
-          mastery:`80%`
-        },
-        {
-          name:"Vuex，VueRouter",
-          mastery:`70%`
-        },
-          {
-          name:"NodeJS",
-          mastery:`50%`
-        },
-          {
-          name:"Laravel",
-          mastery:`60%`
-        },
-        {
-          name:"Git",
-          mastery:`80%`
-        }
+    introduce:
+      '大学期间出于对于编程的喜爱，两年以来通过互联网和校内团体接触了Web开发，秉着对编程从0到1的成就感，让我对前端网页开发这个方向产生了浓厚的兴趣和求知欲。在校内参与过社团的小项目，接触了前后端的领域，积累了Web开发的基础。',
+    skill: [
+      {
+        name: 'CSS3，Sass，Less',
+        mastery: `80%`
+      },
+      {
+        name: 'Vuex，VueRouter',
+        mastery: `70%`
+      },
+      {
+        name: 'NodeJS',
+        mastery: `50%`
+      },
+      {
+        name: 'Laravel',
+        mastery: `60%`
+      },
+      {
+        name: 'Git',
+        mastery: `80%`
+      }
     ],
-    coreSkill:[
-         {
-          name:"Javascript，ES6",
-          mastery:`80%`
-        },
-          {
-          name:"Typescript",
-          mastery:`70%`
-        },
-        {
-          name:"Vuejs",
-          mastery:`70%`
-        }
+    coreSkill: [
+      {
+        name: 'Javascript，ES6',
+        mastery: `80%`
+      },
+      {
+        name: 'Typescript',
+        mastery: `70%`
+      },
+      {
+        name: 'Vuejs',
+        mastery: `70%`
+      }
     ]
   }),
   methods: {
-    renderBar(){
-      this.skill.forEach((item,index)=>{
+    renderBar () {
+      this.skill.forEach((item, index) => {
         this.$refs.masteryBar[index].style.width = item.mastery
       })
-      const r = window.getComputedStyle(this.$refs.circle[0],null).strokeDasharray.replace('px','')
-      this.coreSkill.forEach((item,index)=>{
-        let mastery = item.mastery.replace('%','')
+      const r = window
+        .getComputedStyle(this.$refs.circle[0], null)
+        .strokeDasharray.replace('px', '')
+      this.coreSkill.forEach((item, index) => {
+        let mastery = item.mastery.replace('%', '')
         mastery = 1 - mastery / 100
-        this.$refs.circle[index].style.strokeDashoffset = r * mastery;
+        this.$refs.circle[index].style.strokeDashoffset = r * mastery
       })
-  }
+    }
   },
   mounted () {
     this.renderBar()
@@ -238,6 +243,13 @@ export default {
             height: 100%;
             background-color: #495057;
             cursor: pointer;
+            a {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
             .icon-xiazai {
               color: @color;
               font-size: 20px;
