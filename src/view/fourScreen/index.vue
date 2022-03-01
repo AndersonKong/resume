@@ -3,7 +3,7 @@
     <div class="four-screen-container">
       <div class="four-screen-title">个人作品</div>
       <div class="four-screen-content">
-        <t-row style="width:100%">
+        <t-row style="width:100%;" justify="start">
           <t-col
             class="content-images"
             :md="4"
@@ -36,15 +36,15 @@ export default {
   },
   data: () => ({
     images: [
-      'images/test-1.jpg',
-      'images/test-2.jpg',
-      'images/test-3.jpg',
-      'images/test-4.jpg',
-      'images/test-5.jpg',
-      'images/test-6.jpg',
-      'images/test-7.jpg',
-      'images/test-8.jpg',
-      'images/test-9.jpg'
+      'images/blog-1.jpeg',
+      'images/blog-2.jpeg',
+      'images/cms-1-1.jpeg',
+      'images/cms-1-2.jpeg',
+      'images/weibo.jpeg'
+      // 'images/test-6.jpg',
+      // 'images/test-7.jpg',
+      // 'images/test-8.jpg',
+      // 'images/test-9.jpg'
     ]
   }),
   methods: {
@@ -76,9 +76,6 @@ export default {
       margin-bottom: 50px;
     }
     .four-screen-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin-bottom: 80px;
       .content-images {
         display: flex;
@@ -90,14 +87,36 @@ export default {
           height: 400px;
           cursor: pointer;
           overflow: hidden;
+          position: relative;
+          overflow: hidden;
+          &::before {
+            content: '';
+            z-index: 10;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #495057;
+            // background-image: linear-gradient(
+            //   to bottom right,
+            //   transparent,
+            //   rgba(253, 189, 0, 1)
+            // );
+            // opacity: 0.3;
+            transform: translate(60%, 80%) rotate(45deg);
+            transition: all 0.5s ease-in-out;
+          }
+          &:hover:before {
+            transform: translate(100%, 100%) rotate(45deg);
+          }
+          &:hover img {
+            transform: scale(1.2);
+          }
           img {
             width: 100%;
             height: 100%;
             transition: all 0.5s;
-
-            &:hover {
-              transform: scale(1.2);
-            }
           }
         }
       }

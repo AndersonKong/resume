@@ -3,7 +3,7 @@
     <div class="resume">
       <div class="resume-header">
         <div class="avatar-box">
-          <img class="avatar" src="@/assets/images/avatar.png" />
+          <img class="avatar" src="@/assets/images/avatar_anderson.png" />
           <span></span><span></span><span></span>
         </div>
       </div>
@@ -16,17 +16,16 @@
           <div class="resume_about">
             <span class="label">姓名: </span
             ><span style="font-size:26px"
-              >{{about.name}}<span style="font-weight:700;padding-left:1em;"
-                >{{about.name_en}}
+              >{{ about.name
+              }}<span style="font-weight:700;padding-left:1em;"
+                >{{ about.name_en }}
               </span></span
             >
             <span class="label">学历: </span><span>大专</span>
-            <span class="label">微信: </span><span>{{about.wechat}}</span>
-            <span class="label">电话: </span><span>{{about.mobile}}</span>
-            <span class="label">邮箱: </span
-            ><span>{{about.email}}</span>
-            <span class="label">钉钉: </span
-            ><span>{{about.dingtalk}}</span>
+            <span class="label">微信: </span><span>{{ about.wechat }}</span>
+            <span class="label">电话: </span><span>{{ about.mobile }}</span>
+            <span class="label">邮箱: </span><span>{{ about.email }}</span>
+            <span class="label">钉钉: </span><span>{{ about.dingtalk }}</span>
           </div>
           <div class="QRcode">
             <img src="@/assets/images/QRcode.jpg" alt="" />
@@ -35,14 +34,22 @@
         <t-col :md="6">
           <div class="dev_experience">
             <ul class="exp_parent">
-              <li class="exp_parent-item" v-for="(items,i) in experince" :key="i">
+              <li
+                class="exp_parent-item"
+                v-for="(items, i) in experince"
+                :key="i"
+              >
                 <ul class="exp_children">
                   <li class="exp_children-item describe">
-                    {{items.describe}}
+                    {{ items.describe }}
                   </li>
-                  <li class="exp_children-item" v-for="(item,index) in items.details" :key="index">
-                    <span>{{index+1}}.</span>
-                    {{item}}
+                  <li
+                    class="exp_children-item"
+                    v-for="(item, index) in items.details"
+                    :key="index"
+                  >
+                    <span>{{ index + 1 }}.</span>
+                    {{ item }}
                   </li>
                 </ul>
               </li>
@@ -58,48 +65,45 @@
 export default {
   name: 'secondScreen',
   data: () => ({
-    about:{
-      name: "江佩杰",
-      name_en: "Anderson",
-      wechat: "Anderson-Kong",
-      mobile: "18927912786",
-      email: "AndersonKong@hotmail.com",
-      dingtalk: "AndersonKong@hotmail.com"
+    about: {
+      name: '江佩杰',
+      name_en: 'Anderson',
+      wechat: 'Anderson-Kong',
+      mobile: '18927912786',
+      email: 'AndersonKong@hotmail.com',
+      dingtalk: 'AndersonKong@hotmail.com'
     },
-    experince:[
+    experince: [
       {
-        describe:"使用Vue-Cli脚手架开发基于CMS(Content Management System)的前端项目,熟练使用VueRoute,VueX，Axios等技术",
-        details:[
-          "媒体查询，页面自适应，栅格布局，Flex布局，Grid布局",
-          "页面懒加载，动态加载组件",
-          "异步请求，Axios配置",
-          "Vuex的持久化状态管理",
-          "支持移动端触摸的全屏轮播图",
-          "Echart实现数据可视化",
-          "基于Canvas生成的图片验证码"
+        describe:
+          '使用Vue-Cli脚手架开发基于CMS(Content Management System)的前端项目,熟练使用VueRoute,VueX，Axios等技术',
+        details: [
+          '媒体查询，页面自适应，栅格布局，Flex布局，Grid布局',
+          '页面懒加载，动态加载组件',
+          '异步请求，Axios配置',
+          'Vuex的持久化状态管理',
+          '支持移动端触摸的全屏轮播图',
+          'Echart实现数据可视化',
+          '基于Canvas生成的图片验证码'
         ]
       },
       {
-        describe:"使用JQuery编写页面交互效果以及GSAP动画插件制作的页面动态展示效果",
-        details:[
-          "Ajax请求",
-          "DOM操作",
-          "动画加载效果"
+        describe:
+          '使用JQuery编写页面交互效果以及GSAP动画插件制作的页面动态展示效果',
+        details: ['Ajax请求', 'DOM操作', '动画加载效果']
+      },
+      {
+        describe:
+          '在校期间参与了WEB仿站的团队项目，制作了仿新浪微博PC端和移动端的网页应用，个人分工部分参与了Laravel（PHP框架）以及Vue的使用及开发',
+        details: [
+          '路由鉴权，页面访问和按钮的RCBA(role-based access control)',
+          'MVC，后端路由，表单验证，数据迁移，数据填充，登录验证',
+          '数据填充，登录验证MySQL CURD'
         ]
       },
       {
-        describe:"在校期间参与了WEB仿站的团队项目，制作了仿新浪微博PC端和移动端的网页应用，个人分工部分参与了Laravel（PHP框架）以及Vue的使用及开发",
-        details:[
-          "路由鉴权，页面访问和按钮的RCBA(role-based access control)",
-          "MVC，后端路由，表单验证，数据迁移，数据填充，登录验证",
-          "数据填充，登录验证MySQL CURD"
-        ]
-      },
-      {
-        describe:"使用MasterGO等产品设计软件，参与了页面以及交互设计",
-        details:[
-          "页面布局，栅格系统"
-        ]
+        describe: '使用MasterGO等产品设计软件，参与了页面以及交互设计',
+        details: ['页面布局，栅格系统']
       }
     ]
   }),
@@ -109,8 +113,7 @@ export default {
       console.log(about)
     }
   },
-  mounted () {
-  }
+  mounted () {}
 }
 </script>
 <style lang="less" scope>
@@ -135,7 +138,7 @@ export default {
   }
   .avatar {
     width: 200px;
-    height: auto;
+    height: 200px;
     min-width: 100px;
     border-radius: 50%;
     overflow: hidden;

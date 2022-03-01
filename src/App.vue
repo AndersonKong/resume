@@ -104,8 +104,12 @@ html {
     display: none !important;
   }
   .menu,
-  .rocket {
+  .rocket,
+  .four-screen {
     display: none !important;
+  }
+  .three-screen {
+    margin-top: 200px !important;
   }
 }
 @media (min-width: 1080px) {
