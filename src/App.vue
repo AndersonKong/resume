@@ -16,11 +16,11 @@ export default {
   components: {
     rocket: () => import('@/components/rocket'),
     bottomMenu: () => import('@/components/menu'),
-    firstScreen: () => import('@/components/firstScreen'),
-    secondScreen: () => import('@/components/secondScreen'),
-    threeScreen: () => import('@/components/threeScreen'),
-    fourScreen: () => import('@/components/fourScreen'),
-    fiveScreen: () => import('@/components/fiveScreen')
+    firstScreen: () => import('@/view/firstScreen'),
+    secondScreen: () => import('@/view/secondScreen'),
+    threeScreen: () => import('@/view/threeScreen'),
+    fourScreen: () => import('@/view/fourScreen'),
+    fiveScreen: () => import('@/view/fiveScreen')
   }
 }
 </script>
