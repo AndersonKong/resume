@@ -3,7 +3,7 @@
     <ul>
       <li v-for="(item, i) in menuList" :key="i" @click="changeMenu(i)">
         <a :href="item.url" :class="{ active: current === i }">
-          <i class="iconfont" :class="`icon-${item.icon}` | ''"></i>
+          <i class="iconfont" :class="`icon-${item.icon}`"></i>
           <span>{{ item.title }}</span>
         </a>
       </li>
