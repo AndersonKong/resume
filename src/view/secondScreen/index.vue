@@ -15,8 +15,8 @@
           </div> -->
           <div class="resume_about">
             <span class="label">姓名: </span
-            ><span
-              >{{about.name}}<span style="font-weight:300;padding-left:2em;"
+            ><span style="font-size:26px"
+              >{{about.name}}<span style="font-weight:700;padding-left:1em;"
                 >{{about.name_en}}
               </span></span
             >

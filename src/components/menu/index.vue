@@ -1,28 +1,10 @@
 <template>
   <div class="menu">
     <ul>
-      <li>
-        <a href="#second-screen">
-          <i class="iconfont icon-skill1"></i>
-          <span>简历</span>
-        </a>
-      </li>
-      <li>
-        <a href="#three-screen">
-          <i class="iconfont icon-resume-line"></i>
-          <span>技能</span>
-        </a>
-      </li>
-      <li>
-        <a href="#four-screen">
-          <i class="iconfont icon-zuopin"></i>
-          <span>作品</span>
-        </a>
-      </li>
-      <li>
-        <a href="#four-screen">
-          <i class="iconfont icon-evaluate"></i>
-          <span>评价</span>
+      <li v-for="(item, i) in menuList" :key="i" @click="changeMenu(i)">
+        <a :href="item.url" :class="{ active: current === i }">
+          <i class="iconfont" :class="`icon-${item.icon}` | ''"></i>
+          <span>{{ item.title }}</span>
         </a>
       </li>
     </ul>
@@ -31,10 +13,22 @@
 
 <script>
 export default {
-  name: 'index',
-  data: () => ({}),
-  methods: {}
-}
+  name: "index",
+  data: () => ({
+    current: 0,
+    menuList: [
+      { title: "首屏", icon: "skill1", url: "#first-screen" },
+      { title: "简历", icon: "resume-line", url: "#second-screen" },
+      { title: "技能", icon: "skill1", url: "#three-screen" },
+      { title: "作品", icon: "zuopin", url: "#four-screen" },
+    ],
+  }),
+  methods: {
+    changeMenu(i) {
+      this.current = i;
+    },
+  },
+};
 </script>
 <style lang="less" scoped>
 .menu {
@@ -60,7 +54,12 @@ export default {
         justify-content: center;
         align-items: center;
         color: #e9ecef;
-        font-size: 24px;
+        font-size: 18px;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &.active {
+          color: #fdbe00;
+        }
         .iconfont {
           font-size: 40px;
         }
