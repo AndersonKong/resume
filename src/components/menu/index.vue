@@ -13,22 +13,22 @@
 
 <script>
 export default {
-  name: "index",
+  name: 'index',
   data: () => ({
     current: 0,
     menuList: [
-      { title: "首屏", icon: "skill1", url: "#first-screen" },
-      { title: "简历", icon: "resume-line", url: "#second-screen" },
-      { title: "技能", icon: "skill1", url: "#three-screen" },
-      { title: "作品", icon: "zuopin", url: "#four-screen" },
-    ],
+      { title: '首屏', icon: 'skill1', url: '#first-screen' },
+      { title: '简历', icon: 'resume-line', url: '#second-screen' },
+      { title: '技能', icon: 'skill1', url: '#three-screen' },
+      { title: '作品', icon: 'zuopin', url: '#four-screen' }
+    ]
   }),
   methods: {
-    changeMenu(i) {
-      this.current = i;
-    },
-  },
-};
+    changeMenu (i) {
+      this.current = i
+    }
+  }
+}
 </script>
 <style lang="less" scoped>
 .menu {
