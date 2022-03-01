@@ -16,7 +16,7 @@
             <div class="download">
               <div>Download Resume.docx</div>
               <div>
-                <a href="/" download>
+                <a do>
                   <i class="iconfont icon-xiazai"></i>
                 </a>
               </div>
