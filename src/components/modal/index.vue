@@ -52,16 +52,16 @@ export default {
     drag (e) {
       this.clickDown = true
 
-      this.$refs.ImagesBox.addEventListener('mousemove', e => {
+      this.$refs.ImagesBox.onmousemove = (e) => {
         if (this.clickDown && this.scale > 1) {
-          this.offsetX = e.clientX - this.$refs.modal.offsetLeft - e.offsetX
-          this.offsetY = e.clientY - this.$refs.modal.offsetTop - e.offsetY
+          this.offsetX += e.movementX
+          this.offsetY += e.movementY
           console.log(this.offsetX, this.offsetY)
           this.$refs.ImagesBox.style = `transform:translate(${this.offsetX}px,${
             this.offsetY
           }px) scale(${this.scale - 0.1})`
         }
-      })
+      }
       this.$refs.ImagesBox.onmouseup = () => {
         this.clickDown = false
       }
@@ -110,6 +110,9 @@ export default {
       object-fit: cover;
       user-select: none;
       -webkit-user-drag: none;
+      &:active{
+        cursor: grab;
+      }
     }
     .close-icon {
       background-color: #000;
